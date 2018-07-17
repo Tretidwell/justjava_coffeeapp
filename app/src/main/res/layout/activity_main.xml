@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true">
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".MainActivity">
+
+
+    <EditText
+        android:id="@+id/nameTextBox"
+
+        android:hint="name"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="15dp"
+
+        />
+
+    <TextView
+        android:id="@+id/toppingsTextView"
+        style="@style/HeaderTextStyle"
+        android:layout_alignParentStart="true"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="71dp"
+        android:text="Toppings"
+        android:textColor="@color/black"
+
+        android:textStyle="bold|italic" />
+
+<!--- Quantity idtag = @id/quantity-->
+    <TextView
+        android:id="@+id/quantity"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="231dp"
+        android:text="Quantity"
+        android:textColor="@color/black"
+        android:textSize="32dp" />
+
+    <LinearLayout
+        android:id="@+id/LinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/quantity"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/subtractionbutton"
+
+            android:layout_width="45dp"
+            android:layout_height="50dp"
+
+
+            android:layout_toLeftOf="@id/quantitynumber"
+            android:onClick="decrement"
+            android:paddingTop="18dp"
+            android:text="-"
+
+            android:textSize="24dp" />
+
+        <TextView
+            android:id="@+id/quantitynumber"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/LinearLayout"
+            android:layout_below="@id/LinearLayout"
+
+            android:paddingTop="16dp"
+            android:text="0"
+            android:textColor="@color/black"
+            android:textSize="24dp" />
+
+        <Button
+            android:id="@+id/additionbutton"
+
+            android:layout_width="45dp"
+            android:layout_height="50dp"
+
+            android:layout_toRightOf="@id/quantitynumber"
+
+            android:onClick="increment"
+            android:paddingTop="18dp"
+            android:text="+"
+
+            android:textSize="24dp" />
+
+    </LinearLayout>
+    <!--- value idtag @id/quantitynumber -->
+
+
+<!-- priceLabel idtag @id/priceLabel-->
+    <TextView
+        android:id="@+id/priceLabel"
+
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+
+        android:layout_alignBottom="@+id/LinearLayout"
+        android:layout_alignParentStart="true"
+        android:text="Order Summary"
+        android:textColor="@color/black"
+        android:textSize="24dp" />
+<!-- price idtag @id/price-->
+    <TextView
+        android:id="@+id/order_summary_text_view"
+
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+
+
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/priceLabel"
+        android:textColor="@color/black"
+        android:textSize="24dp" />
+
+    <!-- -->
+
+
+    <Button
+        android:id="@+id/button"
+
+        android:text="Submit Order"
+
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:onClick="submitOrder"
+
+
+        />
+
+    <CheckBox
+        android:id="@+id/whippedCreamBox"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="136dp"
+        android:text="Whipped Cream" />
+
+    <CheckBox
+        android:id="@+id/cocoBox"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="182dp"
+        android:text=" Chocolate" />
+
+
+
+</RelativeLayout>
+</ScrollView>
